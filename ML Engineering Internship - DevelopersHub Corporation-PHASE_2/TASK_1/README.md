@@ -4,7 +4,7 @@
 ###  Objective of Task
 The primary focus of this task was to implement Transfer Learning on a Deep Learning architecture. The objective was to adapt a massive pre-trained language transformer model to classify multi-class sequence inputs, successfully mapping raw, unstructured text strings (news headlines and descriptions) into four highly specified target semantic domains.
 
-### ⚙ Methodology & Approach
+###  Methodology & Approach
 1. **Dataset Integration:** Imported the standardized **AG News Dataset** directly from the Hugging Face hub, featuring text-based records uniformly mapped across 4 target topical categories: *World, Sports, Business, and Sci/Tech*.
 2. **Text Preprocessing & Tokenization:** Leveraged the automated `AutoTokenizer` configured specifically for the `bert-base-uncased` base model. Text features were cleaned, tokenized, padded, and truncated uniformly to a fixed length constraint (`max_length=128`) to generate clean token attention masks.
 3. **Model Fine-Tuning & Hyperparameters:** Loaded the pre-trained `bert-base-uncased` checkpoint with a sequence classification header via PyTorch. Fine-tuning sequences were managed utilizing the high-level Hugging Face `Trainer` API running on optimized tensor environments.
